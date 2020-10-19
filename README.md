@@ -15,17 +15,17 @@ I am going to be building a very minimal express app that will allow users to si
 ## Learning Outcomes
 
 ### PassportJS
-Understand the use order for the required middleware.
-Describe what Strategies are.
-Use the LocalStrategy to authenticate users.
-Explain the purpose of cookies in authentication.
-Refreshed on prior learning material (routes, templates, middleware)
-Use PassportJS to setup user authentication with Express.
+- Understand the use order for the required middleware.
+- Describe what Strategies are.
+- Use the LocalStrategy to authenticate users.
+- Explain the purpose of cookies in authentication.
+- Refreshed on prior learning material (routes, templates, middleware)
+- Use PassportJS to setup user authentication with Express.
 
 ### Data Security/Safety
-Describe what bcrypt is and its use.
-Explain the importance of password hashing.
-Describe bcrypt’s compare function.
+- Describe what bcrypt is and its use.
+- Explain the importance of password hashing.
+- Describe bcrypt’s compare function.
 
 To get a local copy up and running follow these simple example steps.
 
