@@ -1,0 +1,27 @@
+{
+  "name": "authentication-basics-nodejs",
+  "version": "1.0.0",
+  "description": "Creating users and allowing them to log in and out of a web apps is a crucial functionality that I am ready to learn!. In this lesson we’re going to be using passportJs an excellent middleware to handle the user's authentication and sessions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othman-19/authentication-basics-nodejs.git"
+  },
+  "author": "Othmane Namani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/othman-19/authentication-basics-nodejs/issues"
+  },
+  "homepage": "https://github.com/othman-19/authentication-basics-nodejs#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.10.9",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}
