@@ -7,9 +7,19 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const mongoDb = "YOUR MONGO URL HERE";
+const mongoDb = "mongodb://othman-19:0780458241-Na@cluster0-shard-00-00.z3rwo.mongodb.net:27017,cluster0-shard-00-01.z3rwo.mongodb.net:27017,cluster0-shard-00-02.z3rwo.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-jxxaz7-shard-0&authSource=admin&retryWrites=true&w=majority";
 
-mongoose.connect(mongoDb, { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(mongoDb, { useUnifiedTopology: true, useNewUrlParser: true })
+  .then(() => {
+    console.log('MongoDB Connected');
+    return server.listen({ port: PORT });
+  })
+  .then((res) => {
+    console.log(`Server running at ${res.url}`);
+  })
+  .catch(err => {
+    console.error(err)
+  });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
 
