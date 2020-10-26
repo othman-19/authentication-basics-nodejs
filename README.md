@@ -47,10 +47,11 @@ To get a local copy up and running follow these simple example steps.
 
 5. Run `npm install` in your terminal.
 
-6. Run your local server.
+6. Run your local server with `node app.js`.
 
 7. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+8. Try subscribe, login and logout.
 
 ## Author(s)
 [Othmane Namani](https://github.com/othman-19/).  
