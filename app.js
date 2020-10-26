@@ -70,7 +70,9 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req, res) => {
   res.render("index", { user: req.user });
 });
+
 app.get("/sign-up", (req, res) => res.render("sign-up-form"));
+
 app.post("/sign-up", (req, res, next) => {
   const user = new User({
     username: req.body.username,
@@ -82,6 +84,7 @@ app.post("/sign-up", (req, res, next) => {
     res.redirect("/");
   });
 });
+
 app.post(
   "/log-in",
   passport.authenticate("local", {
@@ -89,5 +92,10 @@ app.post(
     failureRedirect: "/"
   })
 );
+
+app.get("/log-out", (req, res) => {
+  req.logout();
+  res.redirect("/");
+});
 
 app.listen(3000, () => console.log("app listening on port 3000!"));
