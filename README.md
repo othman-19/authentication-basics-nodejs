@@ -1,4 +1,4 @@
-# PROJECT : AUTHENTICATION BASICS USING NODE.JS(Tutorial)
+# PROJECT : AUTHENTICATION BASICS and SECURITY CONFIGURATION using node.js(tutorial)
 
 Creating users and allowing them to log in and out of a web apps is a crucial functionality that I am ready to learn!. In this lesson we’re going to be using passportJs an excellent middleware to handle the user's authentication and sessions.
 
