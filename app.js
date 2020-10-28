@@ -5,18 +5,17 @@ const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
+const { resolve } = require("path");
 
+require('dotenv').config()
+const mongoDb = process.env.MONGO_DB;
+const app = express();
 const Schema = mongoose.Schema;
-
-const mongoDb = "mongodb://othman-19:0780458241-Na@cluster0-shard-00-00.z3rwo.mongodb.net:27017,cluster0-shard-00-01.z3rwo.mongodb.net:27017,cluster0-shard-00-02.z3rwo.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-jxxaz7-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 mongoose.connect(mongoDb, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => {
     console.log('MongoDB Connected');
-    return server.listen({ port: PORT });
-  })
-  .then((res) => {
-    console.log(`Server running at ${res.url}`);
+    app.listen({port: process.env.PORT}, () => console.log(`app listening on port ${process.env.PORT}!`))
   })
   .catch(err => {
     console.error(err)
@@ -32,7 +31,6 @@ const User = mongoose.model(
   })
 );
 
-const app = express();
 app.set("views", __dirname);
 app.set("view engine", "ejs");
 
@@ -113,5 +111,3 @@ app.get("/log-out", (req, res) => {
   req.logout();
   res.redirect("/");
 });
-
-app.listen(3000, () => console.log("app listening on port 3000!"));
