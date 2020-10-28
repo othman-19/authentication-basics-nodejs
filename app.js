@@ -65,7 +65,7 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-app.use(session({ secret: "cats", resave: false, saveUninitialized: true }));
+app.use(session({ secret: process.env.SECRET, resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.urlencoded({ extended: false }));
@@ -82,7 +82,7 @@ app.get("/", (req, res) => {
 app.get("/sign-up", (req, res) => res.render("sign-up-form"));
 
 app.post("/sign-up", (req, res, next) => {
-  bcrypt.hash(req.body.password, 10, (err, hashedPassword) => {
+  bcrypt.hash(req.body.password, process.env.HASH_NUM | 0,(err, hashedPassword) => {
     if (err) { 
       return next(err);
     };
