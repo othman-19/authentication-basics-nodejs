@@ -11,6 +11,7 @@ I am going to be building a very minimal express app that will allow users to si
 - PassportJS
 - Npm.
 - ES6.
+- bcrypt.js
 
 ## Learning Outcomes
 
@@ -26,6 +27,12 @@ I am going to be building a very minimal express app that will allow users to si
 - Describe what bcrypt is and its use.
 - Explain the importance of password hashing.
 - Describe bcrypt’s compare function.
+
+### Security Configuration.
+- Access environment variables using the process object in node
+- Use dotenv to store and make environment variables available to the application globally.
+- Describe how environment variables are handled in version control.
+- Work with nconf’s hierarchical configuration
 
 To get a local copy up and running follow these simple example steps.
 
